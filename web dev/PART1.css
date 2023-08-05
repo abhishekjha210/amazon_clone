@@ -1,0 +1,272 @@
+/*content delivery network links the nearest server to us
+ so that if we need image icon etc then nearest server gives this
+ the nearset the server is the faster it will be seen on our website*/
+ 
+ /* first we set everything for our project element
+ like set margin 0 for all element so that there is no extra margin we give margin to our elements from our own */
+ * {
+    margin: 0;
+    font-family: Arial;
+    /*border-box tells the browser to account for any border and padding in the values you specify for an 
+    element's  width and height. If you set an element's width to 100 pixels, that 100 pixels will include 
+    any border or padding you added, and the content box will shrink to absorb that extra width*/
+    border: border-box;
+ }
+
+ .navbar {
+    /*div so we have to give a height (outer box)*/
+    height: 60px;
+    background-color: #0f1111;
+    color:white;
+    /*multiple div and we want to be in same line for all div*/
+    display:flex;
+    align-items: center; /*to move the elements to center*/
+    justify-content: space-evenly;
+ }
+
+/*div will only be visible when we give specific height*/
+.nav-logo {
+    height:50px;
+    width:100px;
+}
+
+ /*for our logo*/
+ .logo {
+    background-image:url("amazon_logo.png");
+    /*cover = Scales the image to be large enough until the background area is completely 
+    covered by the image.Some parts of the image may not be in view within the area. 100% = Fills the 
+    area but all of the image isvisible*/
+    background-size: cover;
+    height:50px;
+    width:100%;
+ }
+
+ .border {
+    border: 1.5px solid transparent;
+ }
+ /*when no mouse over the element in navbar then transparent border but white when hovered*/
+ .nav-logo.border:hover,.nav-address.border:hover,.nav-signin.border:hover,.nav-returns.border:hover{
+    border: 1.5px solid white;
+}
+
+
+/*------------------------------------------------------------------------------------------*/
+/*for second box*/
+/*for second div or second box*/
+.add-first {
+    color: #cccccc;
+    font-size: 0.7rem;
+    margin-left: 15px; /*shift left by 15 px*/
+}
+
+.add-second {
+/*already white so not needed for again defining 
+rem means as width changes font size also changes*/
+    font-size: 1rem;
+    margin-left: 3 px;
+}
+
+.add-icon {
+    display:flex; /*for display in same line*/
+    align-items: center;
+}
+
+/*------------------------------------------------------------------------------------------*/
+/*for third box*/
+
+.nav-search {
+    display: flex;
+    justify-content: space-evenly;/*all th item get evenly spaced*/
+    width:620px;
+    height:40px;
+    /*curved border*/
+    border-radius:4px;
+    background-color: pink;
+}
+.search-select{
+    background-color: #f3f3f3;
+    width: 50px;
+    text-align: center;
+    border-top-left-radius:4px;
+    border-bottom-left-radius:4px;
+    border:none; /*remove border given for select*/
+}
+.search-input{
+    width:100%; /*blank area for serach so 100%*/
+    font-size:1rem;
+    border:none;
+}
+.search-icon{
+    width:45px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:1.2rem;
+    background-color: #febd68;
+    border-top-right-radius:4px;
+    border-bottom-right-radius:4px;
+    color: #0f1111;
+}
+.nav-search:hover{
+    border:2px solid orange;
+}
+/*_________________________________________________________________________________________________
+box 4*/
+span{
+    font-size: 0.7rem;
+}
+.nav-second{
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+/*next box*/
+.nav-cart i{
+    font-size: 30px;
+}
+
+.nav-cart {
+    font-size: 0.85rem;
+    font-weight:700;
+}
+
+/*___________________________________________________________-
+________________________________________________________________________*/
+/*panels*/
+.panel{
+    height:40px;
+    background-color: #222f3d;
+    display:flex;
+    color:white;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.panel-ops p{
+    display: inline;/*for same line*/
+    margin-left: 15px;
+}
+
+.panel-ops {
+    width:70%;
+    font-size:0.85rem;
+}
+.panel-deals{
+    font-size:0.9rem;
+    font-weight: 700;
+}
+
+/*___________________________________________________________-
+________________________________________________________________________*/
+/*hero section*/
+.hero-section{
+    background-image: url("hero.png");
+    background-size: cover;
+    height:350px;
+    display: flex;/*for making the written cover only certain area and not whole*/
+    justify-content: center;
+    align-items: flex-end;
+}
+.hero-msg{
+    background-color: white;
+    color:black;
+    height:40px;
+    display:flex;/*for bringing in center*/
+    align-items: center;
+    justify-content: center;
+    font-size:0.85rem;
+    width:80%;
+    margin-bottom:25px;
+}
+.hero-msg a{
+    color:#007185;
+}
+
+/*___________________________________________________________-
+________________________________________________________________________*/
+/*shop section*/
+.shop-section{
+    display: flex;
+    flex-wrap: wrap; /*so that only 4 elment is in top otherwise 8 element are on top*/
+    justify-content: space-evenly;
+    background-color:rgb(252, 223, 228) ;
+}
+.box{
+    height:400px;
+    width:22%;
+    background-color: white;
+    padding: 20px 0px 15px;
+    margin:15px; /*box moves down from top*/
+}
+.box-img{
+    height:300px;
+    background-size: cover; 
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.box-content{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.box-content p{
+    color:#007185;
+}
+
+/*footer*/
+footer{
+    margin-top: 15px;
+}
+.foot-panel{
+    background-color: #37475a;
+    color:white;
+    height:50px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.5rem;
+}
+.foot-panel2{
+    background-color: #222f3d;
+    color:white;
+    height:300px;
+    display:flex;
+    justify-content: space-evenly;
+}
+ul{
+    margin-top: 20px;
+}
+ul a{
+    display:block; /*all occupy whole one line*/
+    font-size: 0.85rem;
+    margin-top: 10px;
+    color:#dddddd;
+
+}
+.foot-panel3{
+    background-color: #222f3d;
+    color: white;
+    border-top: 0.5px solid white;
+    height:70px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    background-image:url("amazon_logo.png");
+    background-size: cover;
+    height:50px;
+    width:100px;
+}
+.foot-panel4{
+    background-color: #0f1111;
+    color:white;
+    height:100px;
+    font-size: 0.7rem;
+    text-align: center;
+}
+.pages{
+    padding-top: 25px;
+}    
+.copywright{
+    padding-top: 5px;
+}
